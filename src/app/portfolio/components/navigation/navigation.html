@@ -1,0 +1,35 @@
+<nav [class.scrolled]="isScrolled" class="navigation">
+  <div class="nav-container">
+    <div class="nav-content">
+      <div class="logo">SecureDEV</div>
+      
+      <div class="nav-links">
+        <button 
+          *ngFor="let item of navItems"
+          (click)="scrollToSection(item)"
+          [class.active]="activeSection === item"
+          class="nav-link">
+          {{ item | titlecase }}
+        </button>
+      </div>
+
+      <button class="mobile-menu-btn" (click)="toggleMobileMenu()">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path *ngIf="!mobileMenuOpen" [attr.d]="iconService.getIconPath('menu')"></path>
+          <path *ngIf="mobileMenuOpen" [attr.d]="iconService.getIconPath('x')"></path>
+        </svg>
+      </button>
+    </div>
+  </div>
+
+  <div *ngIf="mobileMenuOpen" class="mobile-menu">
+    <div class="mobile-menu-content">
+      <button 
+        *ngFor="let item of navItems"
+        (click)="scrollToSection(item)"
+        class="mobile-nav-link">
+        {{ item | titlecase }}
+      </button>
+    </div>
+  </div>
+</nav>

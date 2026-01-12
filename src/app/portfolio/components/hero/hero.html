@@ -1,0 +1,63 @@
+<section id="home" class="hero-section">
+  <div class="hero-container">
+    <div class="hero-content">
+      <div class="greeting">Hi, I'm</div>
+      <h1 class="name">Hanadi Fakir</h1>
+      
+      <div class="typing-container">
+        <p class="typing-text">
+           {{ typingService.typedText$ | async }}<span class="cursor">|</span>
+        </p>
+      </div>
+      
+      <p class="subtitle">
+        Junior Full Stack Web Developer | Information Security Graduate
+      </p>
+      
+      <p class="description">
+        I'm a junior developer from Salalah, Oman, passionate about creating secure, scalable, and user-friendly web applications.
+      </p>
+      
+      <div class="cta-buttons">
+        <button (click)="scrollToSection('projects')" class="btn-primary">
+          View My Work
+        </button>
+        <button class="btn-secondary"><a href="assets/HanadiFakirCV.pdf"> Download Resume</a>
+        </button>
+      </div>
+      
+      <div class="social-links">
+        <a href="https://github.com/hanadi-securedev" class="social-icon">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path [attr.d]="iconService.getIconPath('github')"></path>
+          </svg>
+        </a>
+        <a href="https://www.linkedin.com/in/hanadialnoubi/" class="social-icon">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path [attr.d]="iconService.getIconPath('linkedin')"></path>
+          </svg>
+        </a>
+        <a href="https://www.byhanadi4@gmail.com" class="social-icon">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path [attr.d]="iconService.getIconPath('mail')"></path>
+          </svg>
+        </a>
+      </div>
+    </div>
+
+    <div class="highlights">
+      <div *ngFor="let item of highlights" class="highlight-card">
+        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="highlight-icon">
+          <path [attr.d]="iconService.getIconPath(item.icon)"></path>
+        </svg>
+        <span class="highlight-label">{{ item.label }}</span>
+      </div>
+    </div>
+  </div>
+  
+  <div class="scroll-indicator">
+    <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+      <path [attr.d]="iconService.getIconPath('chevron-down')"></path>
+    </svg>
+  </div>
+</section>

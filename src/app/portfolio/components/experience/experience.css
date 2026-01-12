@@ -1,0 +1,79 @@
+.experience-section {
+  padding: 5rem 1rem;
+  background-color: rgba(15, 23, 42, 0.3);
+  position: relative;
+  z-index: 10;
+}
+
+.section-container-narrow {
+  max-width: 896px;
+  margin: 0 auto;
+}
+
+.timeline {
+  position: relative;
+  padding-left: 5rem;
+}
+
+.timeline-line {
+  position: absolute;
+  left: 2rem;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background-color: rgba(6, 182, 212, 0.3);
+}
+
+.timeline-item {
+  position: relative;
+  margin-bottom: 2rem;
+}
+
+.timeline-icon {
+  position: absolute;
+  left: -3rem;
+  top: 0;
+  width: 2rem;
+  height: 2rem;
+  background-color: #06b6d4;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+}
+
+.timeline-content {
+  background-color: rgba(30, 41, 59, 0.5);
+  backdrop-filter: blur(4px);
+  border-radius: 0.75rem;
+  padding: 1.5rem;
+  border: 1px solid rgba(6, 182, 212, 0.3);
+  transition: border-color 0.3s;
+}
+
+.timeline-content:hover {
+  border-color: #06b6d4;
+}
+
+.exp-year {
+  color: #22d3ee;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.exp-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 0.25rem;
+}
+
+.exp-org {
+  color: #9ca3af;
+  font-size: 0.875rem;
+  margin-bottom: 0.75rem;
+}
+
+.exp-desc {
+  color: #d1d5db;
+}

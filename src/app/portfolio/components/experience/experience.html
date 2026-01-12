@@ -1,0 +1,25 @@
+<section id="experience" class="experience-section">
+  <div class="section-container-narrow">
+    <h2 class="section-title">My Journey</h2>
+    <p class="section-subtitle">Building skills through hands-on experience</p>
+    
+    <div class="timeline">
+      <div class="timeline-line"></div>
+      
+      <div *ngFor="let exp of experiences" class="timeline-item">
+        <div class="timeline-icon">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path [attr.d]="iconService.getIconPath(exp.icon)"></path>
+          </svg>
+        </div>
+        
+        <div class="timeline-content">
+          <div class="exp-year">{{ exp.year }}</div>
+          <h3 class="exp-title">{{ exp.title }}</h3>
+          <div class="exp-org">{{ exp.organization }}</div>
+          <p class="exp-desc">{{ exp.description }}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

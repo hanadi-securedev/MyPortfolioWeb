@@ -1,0 +1,53 @@
+<section id="projects" class="projects-section">
+  <div class="section-container">
+    <h2 class="section-title">Featured Projects</h2>
+    <p class="section-subtitle">Real-world applications I've built</p>
+    
+    <div class="projects-grid">
+      <div *ngFor="let project of projects" class="project-card">
+        <h3 class="project-title">{{ project.title }}</h3>
+        <p class="project-description">{{ project.description }}</p>
+        
+        <div *ngIf="project.achievement" class="achievement">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path [attr.d]="iconService.getIconPath('award')"></path>
+          </svg>
+          <span>{{ project.achievement }}</span>
+        </div>
+        
+        <div class="features-section">
+          <div class="features-title">Key Features:</div>
+          <div class="features-list">
+            <div *ngFor="let feature of project.features" class="feature-item">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path [attr.d]="iconService.getIconPath('check-circle')"></path>
+              </svg>
+              {{ feature }}
+            </div>
+          </div>
+        </div>
+        
+        <div class="tech-tags">
+          <span *ngFor="let tech of project.tech" class="tech-tag">
+            {{ tech }}
+          </span>
+        </div>
+        
+        <div class="project-links">
+          <a *ngIf="project.github" [href]="project.github" class="project-link">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path [attr.d]="iconService.getIconPath('github')"></path>
+            </svg>
+            View Code
+          </a>
+          <a [href]="project.link" class="project-link">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path [attr.d]="iconService.getIconPath('external-link')"></path>
+            </svg>
+            Learn More
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

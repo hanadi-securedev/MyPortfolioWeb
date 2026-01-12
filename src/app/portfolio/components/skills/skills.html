@@ -1,0 +1,31 @@
+<section id="skills" class="skills-section">
+  <div class="section-container">
+    <h2 class="section-title">Technical Skills</h2>
+    <p class="section-subtitle">The tools and technologies I work with</p>
+    
+    <div class="skills-grid">
+      <div *ngFor="let category of skillsData" 
+           class="skill-card"
+           [attr.data-color]="category.color">
+        <div class="skill-header">
+          <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="skill-icon">
+            <path [attr.d]="iconService.getIconPath(category.icon)"></path>
+          </svg>
+          <h3 class="skill-title">{{ category.title }}</h3>
+        </div>
+        
+        <div class="skills-list">
+          <div *ngFor="let skill of category.skills" class="skill-item">
+            <div class="skill-info">
+              <span class="skill-name">{{ skill.name }}</span>
+              <span class="skill-level">{{ skill.level }}%</span>
+            </div>
+            <div class="progress-bar">
+              <div class="progress-fill" [style.width.%]="skill.level"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
