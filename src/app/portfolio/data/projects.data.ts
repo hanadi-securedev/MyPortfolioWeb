@@ -10,11 +10,11 @@ export const PROJECTS_DATA: Project[] = [
     github: 'https://github.com/hanadi-securedev/LibraryWebApplication'
   },
   {
-    title: 'Oman Digital Shop Platform',
-    description: 'The system is designed to manage products, categories, orders, and users in a scalable and maintainable way.',
+    title: 'ToDo Management System',
+    description: 'Manage your tasks effortlessly: create, edit, delete, and view all in a clean, user-friendly interface built with Laravel Blade and MVC architecture.',
     tech: ['IoT', 'System Architecture', 'Team Collaboration'],
-    features: ['Product Management', 'Clean Architecture', 'Generic Repository Pattern'],
+    features: ['Laravel Blade templating', 'MVC architecture', 'Simple and user-friendly interface'],
     link: '#',
-    github: "https://github.com/hanadi-securedev/OmanDigitalShopPlatform"
+    github: "https://github.com/hanadi-securedev/ToDo-Laravel"
   }
 ];
