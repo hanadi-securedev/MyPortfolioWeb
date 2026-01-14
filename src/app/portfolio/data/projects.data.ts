@@ -2,17 +2,24 @@ import { Project } from '../models/project.model';
 
 export const PROJECTS_DATA: Project[] = [
   {
-    title: 'LibraryWebApplication',
-    description: 'A comprehensive web platform for managing organize books,members, track borrowing activity, and simply provide a much smarter library experience',
-    tech: ['ASP.NET Core', 'C#', 'SQL Server', 'JavaScript', 'Bootstrap'],
-    features: ['Role-based access', 'Track book availability', 'Record transactions (borrow / return)','Manage Books (add, edit, delete)','Secure backend with database integration' ,'Responsive design'],
-    link: '#',
-    github: 'https://github.com/hanadi-securedev/LibraryWebApplication'
+  title: 'Oman Smart Marketplace',
+  description: 'A professional web platform empowering Omani SMEs. Vendors can manage products and orders, while customers enjoy a secure and trusted marketplace to buy local products.',
+  tech: ['ASP.NET Core', 'Entity Framework Core', 'SQL Server', 'ASP.NET MVC', 'Razor Views', 'Bootstrap'],
+  features: [
+    'Role-based access (Admin, Vendor, Customer)',
+    'Manage products & categories',
+    'Order tracking & handling',
+    'Secure authentication & RBAC',
+    'Clean Architecture for scalability & maintainability',
+    'Responsive Omani-inspired UI'
+  ],
+  link: '#',
+  github: 'https://github.com/hanadi-securedev/OmanSmartMarketplace',
   },
   {
     title: 'ToDo Management System',
     description: 'Manage your tasks effortlessly: create, edit, delete, and view all in a clean, user-friendly interface built with Laravel Blade and MVC architecture.',
-    tech: ['IoT', 'System Architecture', 'Team Collaboration'],
+    tech: ['IoT','Laravel', 'PHP','MySql','System Architecture', 'Team Collaboration'],
     features: ['Laravel Blade templating', 'MVC architecture', 'Simple and user-friendly interface'],
     link: '#',
     github: "https://github.com/hanadi-securedev/ToDo-Laravel"
