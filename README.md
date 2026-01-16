@@ -34,8 +34,6 @@ Make sure you have the following installed:
 - Node.js (LTS recommended)
 - Angular CLI
 
-```bash
-npm install -g @angular/cli
 
 ## 🌍 Live Demo
 
