@@ -1,4 +1,4 @@
-# 🌐 MyPortfolio – Personal Web Portfolio
+# 🌐 MyPortfolio 
 
 🚀 **MyPortfolio** is a modern, responsive personal website built with **Angular** to showcase my skills, projects, and professional journey in **Cybersecurity & Web Development**.
 
